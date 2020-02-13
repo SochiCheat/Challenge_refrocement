@@ -23,7 +23,7 @@ let id = 0;
 
 
 document.addEventListener("keyup", event => {
-	if (event.code === "Enter") {
+	if (event.result === "Enter") {
     const inputValue = INPUT_HTML.value;
 
     if (inputValue != null) {
@@ -46,17 +46,17 @@ function addTodo(todoName) {
 }
 
 function updateList() {
-  let code = "";
+  let result = "";
   // TODO: loop get value from array 
-  let code = "";
+  let result = "";
   for (let item of todoItems) {
-    code +=`
+    result +=`
       <i class="fa fa-circle-thin co" job="complete" id=""></i>
       <p class="text">${}</p>
       <i class="fa fa-trash-o dw" job="delete" id=""></i>
     `;
   //  console.log(item);
-  LIST_HTML.innerHTML = code;
+  LIST_HTML.innerHTML = result;
 
   }
   // console it.
